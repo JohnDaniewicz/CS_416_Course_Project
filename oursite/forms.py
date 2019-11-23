@@ -1,15 +1,15 @@
 from django import forms
-from .models import Register
+from .models import ContactMessage
 
 
-class RegisterForm(forms.Form):
+class ContactForm(forms.Form):
     first_name = forms.CharField(required=True,  max_length=60)
     last_name = forms.CharField(required=True, max_length=60)
     email = forms.EmailField(required=True)
     message = forms.CharField(required=True, widget=forms.Textarea)
 
 
-class RegisterForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
     class Meta:
-        model = Register
+        model = ContactMessage
         fields = ['first_name', 'last_name', 'email', 'message']
