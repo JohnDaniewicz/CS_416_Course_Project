@@ -62,7 +62,7 @@ def register(request):
         password2 = request.POST['password2']
 
         # More validation to make sure the above fields are not empty!
-
+        
         # Validate password1 matched with password2
         # Validate the username and email address was not taken
         if password1 == password2:
