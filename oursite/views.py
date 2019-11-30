@@ -49,11 +49,7 @@ def login(request):
 def logout(request):
     # This is the method to logout the user
     auth.logout(request)
-    return redirect('logoutPage')  # connects to the below method so logout.html page is shown
-
-def logoutPage(request):
-    # This is a method specifically for showing the user a specific logout page
-    return render(request, 'oursite/logout.html')
+    return render(request, 'oursite/logout.html')  # sends them to logout page
 
 def gamePage(request):
 
