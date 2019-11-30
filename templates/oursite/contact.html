@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="p-3 mb-2 bg-light text-dark">
     <h1>Contact Us</h1>
     <form action="{% url 'contact'%}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit Form">
     </form>
-
-
+    <br>
+    <a href={% url  'index' %}>Back</a>
+</div>
 {% endblock content%}

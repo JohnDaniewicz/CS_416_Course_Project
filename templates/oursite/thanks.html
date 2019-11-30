@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content%}
-
+<div class="p-3 mb-2 bg-light text-dark">
     <h1>Thanks!</h1>
-    <p>Thank you for contacting us. We will get back to you as soon as possible, blah blah...</p>
-
+    <p>Thank you for contacting us. We will get back to you as soon as possible.</p>
+    <a href={% url  'index' %}>Home</a>
+</div>
 {% endblock content %}
